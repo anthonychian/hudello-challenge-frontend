@@ -7,11 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles({
-    selectionContainer: {
-        borderRadius: '20px',
-        border: `2px solid rgb(56, 38, 255)`,
-        height: '250px'
-    },
     selection: {
         display: 'flex',
         alignItems: 'center',
@@ -87,7 +82,7 @@ export default function MyGender(props) {
     return (
         <div>
             {props.submittedBirthday && <section>
-                {!props.submittedGender && <section className={classes.selectionContainer}>
+                {!props.submittedGender && <section>
                     <header className={classes.header}>Select one</header>
                     <div className={classes.selection}>
                         <div ref={firstIcon} className={classes.iconContainer} onClick={() => {handleClick(firstIcon, secondIcon, thirdIcon, "He/Him")}} >
